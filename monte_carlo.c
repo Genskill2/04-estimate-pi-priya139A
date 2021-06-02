@@ -10,6 +10,20 @@ float frandom() {
   float ret = (float)q/(float)RAND_MAX;
   return ret;
 }
+float mc_pi(int dart){
+    int count=0;
+    float x,y;
+    for(int i=0;i<dart;i++){
+        x=frandom();
+        y=frandom();
+        float dist=sqrt((x*x)+(y*y));
+        if(dist <= 1){
+            count++;
+        }
+    }
+    float pi=(count*4/dart);
+    return pi;
+}
 
 int main(void) {
   float pi0;
