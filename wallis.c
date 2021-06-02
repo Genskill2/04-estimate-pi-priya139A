@@ -4,7 +4,14 @@
 #include <math.h>
 
 float wallis_pi(int);
-
+float wallis_pi(int n){
+float temp=1;
+    for(int i=1; i<=n; i++){	
+    	int dup=i*i;
+    	temp=((4*dup)/((4*dup)-1))*temp;
+    }
+    return temp*2;
+}
 int main(void) {
   float pi;
   for (int i=0; i<5; i++) {
