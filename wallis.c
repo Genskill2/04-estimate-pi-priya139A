@@ -8,7 +8,7 @@ float wallis_pi(int n){
 float temp=1;
     for(int i=1; i<=n; i++){	
     	int dup=i*i;
-    	temp=((4*dup)/((4*dup)-1))*temp;
+    	temp=((4.0*dup)/((4.0*dup)-1))*temp;
     }
     return temp*2;
 }
