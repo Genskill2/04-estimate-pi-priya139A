@@ -23,10 +23,10 @@ float mc_pi(int dart){
         }
       else{
         square_count++;
+      }
     }
-    float pi=(circle_count*4)/square_count;
+    float pi=(float)circle_count*4/square_count;
     return pi;
-    }
 }
 
 int main(void) {
