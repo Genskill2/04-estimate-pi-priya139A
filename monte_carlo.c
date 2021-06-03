@@ -11,7 +11,7 @@ float frandom() {
   return ret;
 }
 float mc_pi(int dart){
-    int square_count,circle_count=0;
+    int square_count=0,circle_count=0;
     float x,y;
     for(int i=0;i<dart;i++){
         x=frandom();
@@ -24,8 +24,9 @@ float mc_pi(int dart){
       else{
         square_count++;
     }
-    float pi=float((circle_count*4)/square);
+    float pi=(circle_count*4)/square_count;
     return pi;
+    }
 }
 
 int main(void) {
